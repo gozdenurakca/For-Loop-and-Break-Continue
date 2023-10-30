@@ -1,0 +1,59 @@
+using System;
+
+namespace donguler
+{
+    class Pogram
+    {
+        static void Main(string[]args )
+        {
+            // Ekrandan girilen sayıya kadar olan tek sayıları ekrana yazdır
+            // ReadLine ekrandan string değer okur.
+            Console.WriteLine("Lutfen bir sayi giriniz");
+            int sayi = int.Parse(Console.ReadLine());
+            for (int i = 1; i < sayi; i++)
+            {
+                if(i % 2 == 1)
+                {
+                    Console.WriteLine(i);
+                }
+                // komutlar    
+            }
+
+            // 1-1000 arasindaki tek ve çift sayıların ayrı ayrı toplamı
+            int tekToplam = 0;
+            int ciftToplam = 0;
+
+            for(int i = 0; i <= 1000; i++)
+            {
+                if(i % 2 == 1)
+                {
+                    tekToplam += i; // tekToplam = tekToplam + i  demektir.
+                }
+                else
+                ciftToplam += i; // ciftToplam = ciftToplam + i demektir.
+            }
+            Console.WriteLine("Tek toplam= " +tekToplam);
+            Console.WriteLine("Cift toplam= " +ciftToplam);
+
+
+            /* break and continue
+            eğer bir döngü içerisinde bir case'a bağlı olarak loop'tan çıkmak istersek 'break' kullanırız.
+
+            */
+
+            for (int i = 1; i < 10; i++)
+            {
+                if(i == 4)
+                break; // 4'ü gördüğün an bitir.
+                Console.WriteLine(i); // 1,2,3
+            }
+
+            for (int i = 1; i < 10; i++)
+            {
+                if(i == 4)
+                continue; // 4'ü gördüğün zaman 4'ü atla ve devam et.
+                Console.WriteLine(i); // 1,2,3,4,5,6,7,8,9
+            }
+        }
+    }
+}
